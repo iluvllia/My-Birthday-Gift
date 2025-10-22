@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love ❤️</title>
+  <style>
+    /* === Base Styles === */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fcdfee;
+    }
+    .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+    p {
+      font-size: 30px;
+    }
+
+     button {
+      margin: 20px 10px;
+      padding: 15px 35px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #ff4081, #e91e63);
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      animation: softPulse 2.5s infinite;
+      
+    }
+
+    @keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }}
+
+    /* === Image Styles === */
+    #picture, #soundButton, #flowers {
+      width: 300px;
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+      animation: softPulse 2.5s infinite;
+      transition: ease-in;
+    }
+
+    #picture:hover, #soundButton:hover, #flowers:hover {
+      transform: scale(1.08);
+      filter: brightness(1.1);
+      opacity: 0.9;
+    }
+
+    #soundButton {
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+
+    /* === Modal Styles === */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 100px auto;
+      padding: 20px;
+      border: 2px solid #888;
+      width: 950px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+      text-align: center;
+      font-size: large;
+      position: relative;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: red;
+    }
+
+    /* === Text Animation === */
+    .elegant-text {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 500;
+      color: #2d2d2d;
+      background-color: #fdf5f9;
+      padding: 1.5em 2.5em;
+      border-radius: 12px;
+      margin: 3rem auto;
+      width: 40%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 30px;
+    }
+
+    .elegant-text span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideIn 0.6s ease-out forwards;
+    }
+
+    .elegant-text span:nth-child(1)  { animation-delay: 0.1s; }
+    .elegant-text span:nth-child(2)  { animation-delay: 0.2s; }
+    .elegant-text span:nth-child(3)  { animation-delay: 0.3s; }
+    .elegant-text span:nth-child(4)  { animation-delay: 0.4s; }
+    .elegant-text span:nth-child(5)  { animation-delay: 0.5s; }
+    .elegant-text span:nth-child(6)  { animation-delay: 0.6s; }
+    .elegant-text span:nth-child(7)  { animation-delay: 0.7s; }
+    .elegant-text span:nth-child(8)  { animation-delay: 0.8s; }
+    .elegant-text span:nth-child(9)  { animation-delay: 0.9s; }
+    .elegant-text span:nth-child(10) { animation-delay: 1s; }
+
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animated Text -->
+  <p class="elegant-text">
+    <span>I</span><span> </span>
+    <span>l</span><span>o</span><span>v</span><span>e</span><span> </span>
+    <span>y</span><span>o</span><span>u</span><span>!</span>
+  </p>
+
+  <!-- Audio -->
+  <audio id="myAudio" src="Your_love (mp3cut.net).mp3" loop></audio>
+
+  <!-- Interactive Images -->
+  <img id="picture" src="wedding-photography.png" alt="Album">
+  <img id="soundButton" src="sweet.png" alt="Message">
+  <img id="flowers" src="bouquet.png" alt="Flowers">
+
+  <!-- Modals -->
+  <!-- Birthday Modal -->
+  <div id="birthdayModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h1>🎉 Happy Birthday! 🎂</h1>
+      <p> Happy birthday to my home. I am always grateful that you are mine.<br> I have the best girl, I have something that deserves to be cherished<br> the girl who can carry me when I'm weak, who can take care of me and our future kids, and teach them things they'll carry into their future. </p> 
+      <p> My day feels incomplete without talking to you, without hearing your voice, your laugh and most importantly, your kisses. Even if you became a poop, I wouldn’t flush you. How could I flush someone with the kindest heart and the sweetest soul? </p> 
+      <p> I know this isn't enough to show you how important you are to me. I love you more than words could say. Thank you for everything. Every day with you feels like a gift, and today is all about celebrating your day. You are my sunshine, my joy, my everything.</p> 
+      <p>- To see you win, is also part of my dreams.</p>
+    </div>
+  </div>
+
+  <!-- Poem Modal -->
+  <div id="poemModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closePoem">&times;</span>
+      <h2>💐 A Poem for You 💕</h2>
+      <p>
+        Like a flowers blooming after rain,<br>
+        Your love has washed away my pain.<br>
+        You are like a tulips in early spring<br>
+        that don't ask for anything, yet you appeared.<br>
+        More beautiful, elegant, and suddenly everything <br>
+        feels, softer, brighter, alive again.
+      </p>
+      <p>
+        You make me want to be better, not because<br>
+        you asked me to, but because you showed me,<br> 
+        life is worth trying. You are the reason,<br>
+        why my shadow still has light to chase,<br>
+        the ache that makes me feel alive, the one <br>
+        that more like the gentle pull that keeps me<br>
+        from giving up. The caffeine that keeps me<br>
+        going in this misserable world.
+      </p>
+      <p>
+        Because you are not just someone I like.<br>
+        You are my girl that calm me, after<br>
+        every storm, the warmth I didn't know<br>
+        I needed, the kind of love that I will<br>
+        cherish forever, and the one who holds my heart.
+      </p>
+      <p>
+        -Happy Birthday to my Little One!
+      </p>
+    </div>
+  </div>
+
+  <!-- Album Modal -->
+  <div id="albumModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeAlbum">&times;</span>
+      <h2>📸 Our Memories Together</h2>
+      <img src="Black & White Modern Halloween Collage Instagram Story.jpg" alt="Album Photo" style="width:95%; margin: 2px; border-radius: 10px;">
+      <p style="margin-top: 50px;">To many more memories! ❤️</p>
+    </div>
+  </div>
+
+  <!-- Home Button -->
+   <div class="button-container">
+  <button onclick="window.location.href='Next.html'">Next</button>
+  <button onclick="window.location.href='index.html'">Home</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const audio = document.getElementById("myAudio");
+
+    const picture = document.getElementById("picture");
+    const soundButton = document.getElementById("soundButton");
+    const flowers = document.getElementById("flowers");
+
+    const birthdayModal = document.getElementById("birthdayModal");
+    const closeModal = document.getElementById("closeModal");
+
+    const poemModal = document.getElementById("poemModal");
+    const closePoem = document.getElementById("closePoem");
+
+    const albumModal = document.getElementById("albumModal");
+    const closeAlbum = document.getElementById("closeAlbum");
+
+    // Show Birthday Modal
+    soundButton.addEventListener("click", () => {
+      audio.play();
+      birthdayModal.style.display = "block";
+    });
+
+    closeModal.addEventListener("click", () => {
+      birthdayModal.style.display = "none";
+    });
+
+    // Show Poem Modal
+    flowers.addEventListener("click", () => {
+      audio.play();
+      poemModal.style.display = "block";
+    });
+
+    closePoem.addEventListener("click", () => {
+      poemModal.style.display = "none";
+    });
+
+    // Show Album Modal
+    picture.addEventListener("click", () => {
+      audio.play();
+      albumModal.style.display = "block";
+    });
+
+    closeAlbum.addEventListener("click", () => {
+      albumModal.style.display = "none";
+    });
+
+    // Close any modal when clicking outside
+    window.addEventListener("click", (event) => {
+      if (event.target === birthdayModal) birthdayModal.style.display = "none";
+      if (event.target === poemModal) poemModal.style.display = "none";
+      if (event.target === albumModal) albumModal.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Love ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              100: '#fff1f2',
+              200: '#ffe4e6',
+              300: '#fecdd3',
+              400: '#fda4af',
+              500: '#fb7185',
+              600: '#f43f5e',
+              700: '#e11d48',
+              800: '#be123c',
+              900: '#9f1239',
+            },
+            secondary: {
+              100: '#ecfdf5',
+              200: '#d1fae5',
+              300: '#a7f3d0',
+              400: '#6ee7b7',
+              500: '#34d399',
+              600: '#10b981',
+              700: '#059669',
+              800: '#047857',
+              900: '#065f46',
+            }
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            cursive: ['Dancing Script', 'cursive']
+          }
+        }
+      }
+    };
+
+    
+  </script>
+
+  <style>
+
+    button{
+        animation: softPulse 2.5s infinite;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+    .heart-beat {
+      animation: heartbeat 1.5s ease-in-out infinite both;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25%, 75% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+    }
+
+    .promise-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .promise-card:hover {
+      transform: translateY(-10px) rotateX(3deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .home-button {
+  background: linear-gradient(45deg, #fb7185, #f43f5e);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 9999px; /* fully rounded */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: softPulse 2.5s infinite;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.home-button:hover {
+  transform: scale(1.07);
+   box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.4);
+}
+
+.home-button:focus {
+  outline: none;
+  box-shadow: 0 0}
+
+  .home-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-primary-100 to-primary-200 min-h-screen font-poppins">
+  <div class="container mx-auto px-4 py-12">
+    
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+      <div class="heart-beat inline-block mb-6" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-primary-800 font-cursive mb-4">My Promises to You</h1>
+    </div>
+
+    <!-- Promises Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Promise 1 -->
+      <div class="promise-card bg-white rounded-xl p-8 shadow-lg border-b-4 border-primary-500">
+        <div class="text-primary-500 mb-4">
+          <i data-feather="heart" class="w-8 h-8" aria-label="Love Icon"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary-800 mb-3">I Promise to Love You</h3>
+        <p class="text-gray-600">Every single day, without fail, I will love you with all my heart. You're my sunshine on cloudy days.</p>
+      </div>
+
+      <!-- Promise 2 -->
+      <div class="promise-card bg-white rounded-xl p-8 shadow-lg border-b-4 border-secondary-500">
+        <div class="text-secondary-500 mb-4">
+          <i data-feather="smile" class="w-8 h-8" aria-label="Smile Icon"></i>
+        </div>
+        <h3 class="text-xl font-bold text-secondary-800 mb-3">I Promise to Make You Smile</h3>
+        <p class="text-gray-600">Even on your worst days, I'll find a way to make you laugh. Your smile is my greatest treasure.</p>
+      </div>
+
+      <!-- Promise 3 -->
+      <div class="promise-card bg-white rounded-xl p-8 shadow-lg border-b-4 border-primary-500">
+        <div class="text-primary-500 mb-4">
+          <i data-feather="shield" class="w-8 h-8" aria-label="Shield Icon"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary-800 mb-3">I Promise to Protect You</h3>
+        <p class="text-gray-600">I'll always be your safe place, your shelter from any storm. You'll never face anything alone.</p>
+      </div>
+
+    </div>
+
+    <!-- Secret Message Button -->
+    <div class="text-center mt-16">
+      <button onclick="revealSecret()" class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105" aria-label="Reveal secret message">
+        Secret Message ❤️
+      </button>
+      <div id="secretMessage" class="hidden mt-6 bg-white p-6 rounded-xl shadow-inner max-w-2xl mx-auto" role="alert">
+        <p class="text-primary-800 text-lg font-cursive">
+          No matter how many promises I make, they all boil down to one simple truth, I will choose you, every day, in every way. You're my always. I love you more than words could ever express.
+        </p>
+      </div>
+    </div>
+  </div>
+
+ <div class="home-button-container">
+  <button 
+    onclick="window.location.href='index.html'" 
+    class="home-button"
+    aria-label="Go to Home">
+    Home
+  </button>
+</div>
+
+  <script>
+    feather.replace();
+
+    function revealSecret() {
+      const secret = document.getElementById('secretMessage');
+      secret.classList.toggle('hidden');
+
+      if (!secret.classList.contains('hidden')) {
+        anime({
+          targets: '#secretMessage',
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 800,
+          easing: 'easeOutQuad'
+        });
+      }
+    }
+
+    // Animate promises on load
+    document.querySelectorAll('.promise-card').forEach((card, index) => {
+      anime({
+        targets: card,
+        opacity: [0, 1],
+        translateY: [30, 0],
+        delay: index * 150,
+        duration: 700,
+        easing: 'easeOutQuad'
+      });
+    });
+  </script>
+</body>
+</html>
